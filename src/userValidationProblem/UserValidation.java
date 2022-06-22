@@ -6,16 +6,19 @@ public class UserValidation {
 	
 	public static void main(String[] args) {
 		Scanner scan= new Scanner(System.in);
-		System.out.println("Enter User Last Name.\n"+"Note-> Name Start With Capital And Has Minimum Three Character. ");
-		String lname=scan.next();
+		System.out.println("Enter User Mobile Number\n"+"In this Formate -: xx x98xxxx988" );
 		
-		String regix="^[A-Z]{1,}"+"[a-z A-Z 0-9 ~!@#$%^&*?]{2,}";
+		String moNo=scan.nextLine();
 		
-		boolean result=lname.matches(regix);
+		String regix="^[0-9]{2}"+" "+"[0-9]{10}";
+		
+		boolean result=moNo.matches(regix);
+
 		if(result)
-			System.out.println(lname+"  Is Valid. ");
+			System.out.println(moNo+"  Is Valid. ");
 		else
-			System.out.println(lname+" Is Not Valid.");
+			System.out.println(moNo+" Is Not Valid.");
+			
 	}
 
 }
