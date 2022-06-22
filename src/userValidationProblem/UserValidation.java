@@ -6,18 +6,18 @@ public class UserValidation {
 	
 	public static void main(String[] args) {
 		Scanner scan= new Scanner(System.in);
-		System.out.println("Enter User Mobile Number\n"+"In this Formate -: xx x98xxxx988" );
+		System.out.println("Enter User Password\n"+"Note-: Having Minimum 8 character" );
 		
-		String moNo=scan.nextLine();
+		String pswd=scan.next();
 		
-		String regix="^[0-9]{2}"+" "+"[0-9]{10}";
+		String regix="^[a-z A-Z]{8,}";
 		
-		boolean result=moNo.matches(regix);
+		boolean result=pswd.matches(regix);
 
 		if(result)
-			System.out.println(moNo+"  Is Valid. ");
+			System.out.println(pswd+"  Is Valid. ");
 		else
-			System.out.println(moNo+" Is Not Valid.");
+			System.out.println(pswd+" Is Not Valid.");
 			
 	}
 
