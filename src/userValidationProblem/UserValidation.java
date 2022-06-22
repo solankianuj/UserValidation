@@ -6,11 +6,11 @@ public class UserValidation {
 	
 	public static void main(String[] args) {
 		Scanner scan= new Scanner(System.in);
-		System.out.println("Enter User Password\n"+"Note-: Having Minimum 8 character" );
+		System.out.println("Enter User Password\n"+"Note-: Having Minimum 8 character with Atleast One Upper Case." );
 		
 		String pswd=scan.next();
 		
-		String regix="^[a-z A-Z]{8,}";
+		String regix="^(?=.*[A-Z])[A-Z a-z]{8,}";
 		
 		boolean result=pswd.matches(regix);
 
