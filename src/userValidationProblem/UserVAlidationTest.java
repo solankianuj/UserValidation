@@ -38,8 +38,8 @@ public class UserVAlidationTest {
 		assertEquals(true,valid.validatingPassword("Cccc2222@aj"));	
 		}
 	@Test
-	public void moodAnalyserTest_IsHappy_ThenTrue() {
-		assertEquals(true,valid.moodAnalyser("happy"));	
+	public void moodAnalyserTest() {
+		assertEquals("Sad",valid.moodAnalyser("This Is a sad Message"));	
 	}
 	
 	
