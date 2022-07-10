@@ -1,7 +1,5 @@
 package userValidationProblem;
 
-import java.util.Scanner;
-
 public class UserValidation {
 	Scanner scan =new Scanner(System.in);
 	public boolean validateFirstName() throws UserValidationException {
@@ -30,10 +28,9 @@ public class UserValidation {
 		
 		boolean result=lname.matches(regix);
 		try{
-		if(result) {
+	    if(result) {
 			System.out.println(lname+"  Is Valid. ");
 			return true;
-		}
 		throw new UserValidationException("Invalid Enterd Last Name");
 		}catch (UserValidationException e) {
 			System.out.println(e);
@@ -45,7 +42,6 @@ public class UserValidation {
 		
 		System.out.println("Enter User Email Address.\n"+"Note-> ex.- abc.xyz@bl.co.in");
 		String email=scan.next();
-				
 		String regix="^([a-z]*)"+"[-_.+]*?"+"([a-z 0-9 ]*?)"+"[@]{1}"+"([a-z 0-9]{1,})"+"[.]{1}"+"([a-z]{2,})"+"[.]?"+"([a-z]*?)";
 		
 		boolean result=email.matches(regix);
@@ -92,6 +88,7 @@ public class UserValidation {
 			boolean result=pswd.matches(regix);
 			
 			try{
+		
 			if(result) {
 				System.out.println(pswd+"  Is Valid. ");
 				return true;
@@ -105,15 +102,13 @@ public class UserValidation {
 	}
 	
 	public String moodAnalyser(String mood)  {
-		
+	
 		if(mood.contains("sad")) {
 			return "Sad";
 		}
 		else {
 			return "Happy";
 		}
-
-	
 	}
 	
 	public static void main(String[] args) throws UserValidationException {
@@ -124,11 +119,3 @@ public class UserValidation {
 			userValidation.validatingMobileNumber();
 			userValidation.validatingEmail();
 			userValidation.validatingPassword();
-	}
-	
-	
-	
-	
-	
-	
-}
