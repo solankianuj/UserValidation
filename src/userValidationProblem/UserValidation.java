@@ -29,7 +29,6 @@ interface IvalidatingPassword{
 	void validatingPassword();
 }
 
-
 public class UserValidation {
 	static Scanner scan =new Scanner(System.in);
 	public static void main(String[] args) {
@@ -113,7 +112,6 @@ public class UserValidation {
 		if(result) {
 			System.out.println(pswd+"  Is Valid. ");
 			return;
-			
 		}
 		throw new UserValidationException("Invalid Password");
 		}catch (UserValidationException e) {
@@ -130,5 +128,4 @@ public class UserValidation {
 }
 	
 }
-		
 	
